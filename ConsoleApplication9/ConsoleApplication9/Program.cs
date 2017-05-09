@@ -31,8 +31,8 @@ namespace ConsoleApplication9
     {
         static void Main(string[] args)
         {
-            MyClass Test = new ConsoleApplication9.MyClass(3); // get 
-            Console.WriteLine(Test.Count);
+            MyClass Test = new ConsoleApplication9.MyClass(3);
+            Console.WriteLine(Test.Count); // get
 
             int Sum = Test.Count + 10;
             Console.WriteLine(Sum);
