@@ -62,9 +62,9 @@ namespace ConsoleApplication7_delegate
 
             C test = new C();
             DelegateType delFunc = test.printA;
-            delFunc += test.printB;
+            delFunc += test.printB; // add delegate
             delFunc();
-            delFunc -= test.printB;
+            delFunc -= test.printB; // remove delegate
             delFunc();
 
         }
