@@ -9,11 +9,20 @@ namespace ConsoleApplication9
     class MyClass
     {
         int count;
+        string name;
+
         public int Count
         {
             get { return count; }
             set { count = value; }
         }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
 
         public MyClass(int count)
         {
@@ -25,6 +34,32 @@ namespace ConsoleApplication9
             Console.WriteLine(count);
         }
     }
+
+
+    class A
+    {
+        int number;
+        string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Number
+        {
+            get { return number; }
+            set
+            {
+                if (value < 0 || value > 9)
+                    number = 0;
+                else
+                    number = value;
+            }
+        }
+    }
+
 
 
     class Program
@@ -40,6 +75,15 @@ namespace ConsoleApplication9
             Test.Count = 20; // set
             Test.Print();
 
+            Console.WriteLine("\n\n\n");
+
+            A MyTest = new ConsoleApplication9.A();
+            MyTest.Name = "C#";
+            MyTest.Number = 3;
+            Console.WriteLine("{0} {1}", MyTest.Name, MyTest.Number);
+
+            MyTest.Number = -3;
+            Console.WriteLine(MyTest.Number);
         }
     }
 }
